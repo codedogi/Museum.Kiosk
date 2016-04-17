@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Museum Application</title>
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="third-party/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="third-party/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="third-party/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/simple-sidebar.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- endinject -->
+</head>
+<body>
+<div id="wrapper">
+    <!-- Hamburger Menu -->
+    <div class="menu fa fa-bars"></div>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <span>Museum</span>
+            </li>
+            {% for menu in Menus %}
+            <li>
+                <button type="button" id="{{ menu.id }}" class="btn btn-lg btn-block clip">{{ menu.name }}</button>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <video loop autoplay controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-content-wrapper -->
+<!-- /#wrapper -->
+<!-- inject:js -->
+<script src="third-party/swig/swig.js"></script>
+<script src="third-party/jquery/jquery.js"></script>
+<script src="third-party/jquery/jquery.slim.js"></script>
+<script src="third-party/bootstrap/js/bootstrap.js"></script>
+<script src="app.js"></script>
+<!-- endinject -->
+</body>
+</html>
