@@ -5,7 +5,7 @@
   xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
   IgnorableNamespaces="uap mp iot">
 
-  <Identity Name="Museum.Kiosk" Publisher="CN=hrspencer" Version="1.0.0.0" />
+  <Identity Name="Museum.Kiosk" Publisher="CN=hrspencer" Version="0.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="3c1942e8-8db4-49ef-9343-a6d4c28085cf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

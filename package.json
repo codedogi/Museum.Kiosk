@@ -14,8 +14,8 @@
     "express",
     "handlebars",
     "windows 10",
-	"IOT",
-	"Kiosk"
+	  "IOT",
+	  "Kiosk"
   ],
   "dependencies": {
     "body-parser": "^1.15.0",

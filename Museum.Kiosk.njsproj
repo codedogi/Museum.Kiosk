@@ -38,6 +38,7 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <OutputPath>bin\Debug\</OutputPath>
+    <DeployTarget>remote</DeployTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,7 +55,8 @@
     <Compile Include="www\app\third-party\jquery\jquery.slim.js" />
     <Compile Include="www\app\third-party\swig\swig.js" />
     <Compile Include="www\index.js" />
-    <Compile Include="www\server\server.js" />
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -73,6 +75,16 @@
     <Content Include="www\app\third-party\font-awesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="www\app\third-party\font-awesome\fonts\FontAwesome.otf" />
     <Content Include="www\app\third-party\swig\swig.js.map" />
+    <Content Include="www\app\video\att_mp4.mp4" />
+    <Content Include="www\app\video\menu_mp4.mp4" />
+    <Content Include="www\app\video\museum-app-1.mp4" />
+    <Content Include="www\app\video\museum-app-2.mp4" />
+    <Content Include="www\app\video\museum-app-3.mp4" />
+    <Content Include="www\app\video\museum-app-4.mp4" />
+    <Content Include="www\app\video\museum-app-5.mp4" />
+    <Content Include="www\app\video\museum-app-6.mp4" />
+    <Content Include="www\app\video\project.mp4" />
+    <Content Include="www\app\video\testmp4.mp4" />
     <Content Include="www\app\views\error.html" />
     <Content Include="www\app\views\index.html" />
   </ItemGroup>
@@ -106,8 +118,8 @@
     <Folder Include="www\app\third-party\font-awesome\fonts\" />
     <Folder Include="www\app\third-party\jquery\" />
     <Folder Include="www\app\third-party\swig\" />
+    <Folder Include="www\app\video\" />
     <Folder Include="www\app\views\" />
-    <Folder Include="www\server\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsUwp.targets" />
   <PropertyGroup>
@@ -127,10 +139,13 @@
       <FlavorProperties GUID="{00251f00-ba30-4ce4-96a2-b8a1085f37aa}" Configuration="Debug" Platform="x64">
         <NodejsUwpProjectFlavorCfg>
           <NodeExeArguments>--debug</NodeExeArguments>
+          <DebuggerMachineName>localhost:3000</DebuggerMachineName>
         </NodejsUwpProjectFlavorCfg>
       </FlavorProperties>
       <FlavorProperties GUID="{00251f00-ba30-4ce4-96a2-b8a1085f37aa}" Configuration="Release" Platform="x64">
-        <NodejsUwpProjectFlavorCfg />
+        <NodejsUwpProjectFlavorCfg>
+          <DebuggerMachineName>localhost:3000</DebuggerMachineName>
+        </NodejsUwpProjectFlavorCfg>
       </FlavorProperties>
       <FlavorProperties GUID="{00251f00-ba30-4ce4-96a2-b8a1085f37aa}" Configuration="Debug" Platform="ARM">
         <NodejsUwpProjectFlavorCfg>

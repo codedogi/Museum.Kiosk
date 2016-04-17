@@ -1,6 +1,13 @@
-var http = require('http');
+"use strict";
 
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(1337);
+console.log('Starting application.');
+
+var server = require('./www/index'),
+    port = process.env.PORT || 3000;
+
+server.listen(port, function () {
+    console.log('Express server listening on port: ' + port);
+});
+
+
+
